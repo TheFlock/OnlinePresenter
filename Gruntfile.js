@@ -26,7 +26,7 @@ module.exports = function(grunt) {
             dist: {
                 files: [
                     {expand: true, cwd: appConfig.app + '/', src: ['./*.php', '!./index.php','./*.html', './*.png', './*.ico'], dest: appConfig.dist + '/', filter: 'isFile'},
-                    {expand: true, cwd: appConfig.app, src: ['js/packages/**','js/nettracking4.js','js/browserCheck.js', 'css/cookies/**','klang/**', 'fonts/**', 'json/**', 'audio/**', 'html/**', 'models/**', 'video/**'], dest: appConfig.dist + '/'}, // includes files in path and its subdirs
+                    {expand: true, cwd: appConfig.app, src: ['php/**','slides/**','json/**'], dest: appConfig.dist + '/'}, // includes files in path and its subdirs
                ]
             }
         },
@@ -50,7 +50,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'dist/index.php': ['app/index.php']
+                    'dist/index.php': ['app/index.php'],
+                    'dist/master.php': ['app/master.php']
                 }
             }
         },
@@ -65,14 +66,14 @@ module.exports = function(grunt) {
                     out: appConfig.dist + '/js/main.js'
                 }
             },
-            fallback: {
+            master: {
                 options: {
                     baseUrl: appConfig.app + '/js',
-                    mainConfigFile: appConfig.app + '/js/fallback.js',
+                    mainConfigFile: appConfig.app + '/js/master.js',
                     name: '../bower_components/almond/almond',
-                    include: ['fallback'],
-                    insertRequire: ['fallback'],
-                    out: appConfig.dist + '/js/fallback.js'
+                    include: ['master'],
+                    insertRequire: ['master'],
+                    out: appConfig.dist + '/js/master.js'
                 }
             }
         },
@@ -146,7 +147,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-audiosprite');
     grunt.loadNpmTasks('grunt-processhtml');
 
-    grunt.registerTask('build', ['requirejs:dist', 'requirejs:fallback', 'imagemin', 'compass:dist', 'uglify:dist', 'copy:dist', 'processhtml:dist']);
+    grunt.registerTask('build', ['requirejs:dist', 'requirejs:master', 'imagemin', 'compass:dist', 'uglify:dist', 'copy:dist', 'processhtml:dist']);
     grunt.registerTask('watchscss', ['compass:dev']);
     grunt.registerTask('compileaudiosprite', ['audiosprite:all']);
 

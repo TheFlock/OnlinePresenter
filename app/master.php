@@ -92,7 +92,7 @@
         
         <script src="http://js.pusher.com/2.0/pusher.min.js" type="text/javascript"></script>
         
-        <!-- build:js js/main.js -->
+        <!-- build:js js/master.js -->
         <script data-main="js/master" src="bower_components/requirejs/require.js"></script>
         <!-- /build -->
         
