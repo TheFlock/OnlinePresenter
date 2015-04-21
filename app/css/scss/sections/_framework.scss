@@ -1,0 +1,103 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3012471, 2015-04-20T16:31:06-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Meloriac-Regular by Typodermic
+ * URL: http://www.myfonts.com/fonts/typodermic/meloriac/regular/
+ * Copyright: Copyright (c) 2007 Typodermic Fonts. This font is not freely distributable. Visit typodermic.com for more info.
+ * Licensed pageviews: 20,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3012471
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2df777");
+
+  
+@font-face {font-family: 'Meloriac-Regular';src: url('webfonts/2DF777_0_0.eot');src: url('webfonts/2DF777_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2DF777_0_0.woff2') format('woff2'),url('webfonts/2DF777_0_0.woff') format('woff'),url('webfonts/2DF777_0_0.ttf') format('truetype'),url('webfonts/2DF777_0_0.svg#wf') format('svg');}
+ 
+#backgroundContainer {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	
+	.slide {
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		
+		&.image img, &.video video {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+		}
+	}
+}
+
+#controls {
+	height: 100px;
+	
+	.next, .prev {
+		display: block;
+		width: 100px;
+		height: 0px;
+		padding-top: 100px;
+	}
+	.next{
+		float: right;
+		background: url(../images/arrowNext.png);	
+		background-size: 100px 100px;	
+	}
+	.prev{
+		float: left;
+		background: url(../images/arrowPrev.png);	
+		background-size: 100px 100px;	
+	}
+	#slideLabel {
+		line-height: normal;
+		color: #FFF;
+		text-align: center;
+		font-size: 40px;
+		padding-top: 10px;
+	}
+}
+
+#userList {
+	padding: 0px;
+	padding-top: 30px;
+	list-style: none;
+	margin: 0px;
+	color: #FFF;
+	font-size: 20px;
+	
+	li {
+		border-top: 1px solid #FFF;
+		padding: 10px;
+		
+		.user_id {
+			padding-right: 10px;
+		}
+		.user_status {
+			float: right;
+			color: #666;
+		}
+		
+	}
+	
+}

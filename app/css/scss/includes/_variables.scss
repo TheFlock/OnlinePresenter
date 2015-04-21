@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/*
+ * COLORS
+ */
+$black: #000; // black     
+$white: #fff; // white
+$light_grey: #b8b8b8;
+$primary_color: $black;
+$secondary_color: $light_grey;
+
+/*
+ * FONTS
+ */
+$primary_font: "Dosis", "Helvetica Neue", Helvetica, sans-serif;
+$primary_light: 300;
+$primary_normal: 500;
+$primary_medium: 500;
+$primary_bold: 500;
+
+$header_height: 0;
+$footer_height: 70px;
+
+/* ==========================================================================
+   mixins
+   ========================================================================== */
+
+@mixin hide_text {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+@mixin horizontal_list {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    > li{
+        display:block;
+        float:left;
+        &:first-child{
+            margin-left:0px;
+        }
+    }
+}
+
+@mixin absFull {
+    top: 0; left: 0;
+    position: absolute;
+    width: 100%; height: 100%;
+    display: block;
+}
+
+@mixin transition($t...) {
+    -webkit-transition: $t;
+    -moz-transition: $t;
+    -o-transition: $t;
+    transition: $t;
+}
+
+@mixin transitionDelay($t...) {
+    -webkit-transition-delay: $t;
+    -moz-transition-delay: $t;
+    -o-transition-delay: $t;
+    transition-delay: $t;
+}
+
+@mixin animation($t...) {
+    -webkit-animation: $t;
+    -moz-animation: $t;
+    -o-animation: $t;
+    animation: $t;
+}
+
+@mixin borderRadius($t...) {
+    -webkit-border-radius: $t;
+    -moz-border-radius: $t;
+    border-radius: $t;
+}
+
+@mixin transform($t...) {
+    -webkit-transform: $t;
+    -moz-transform: $t;
+    -ms-transform: $t;
+    -o-transform: $t;
+    transform: $t;
+}

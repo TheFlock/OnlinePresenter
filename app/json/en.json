@@ -1,0 +1,44 @@
+{
+    "slides": [
+        {   
+            "id": "intro",
+            "type": "image",
+            "path": "slides/mountain_bg.jpg"
+        },
+        { 
+            "id": "300Map",
+            "type": "video",
+            "path": "slides/mapAnim_sm",
+            "width": 1024,
+            "height": 640
+        },
+        { 
+            "id": "EOTMap",
+            "type": "video",
+            "path": "slides/EOT_viral",
+            "width": 1530,
+            "height": 956
+        },
+        { 
+            "id": "MOSVirals",
+            "type": "video",
+            "path": "slides/MOS_Virals",
+            "width": 1600,
+            "height": 1000
+        },
+        { 
+            "id": "Mobium",
+            "type": "video",
+            "path": "slides/longrun",
+            "width": 1530,
+            "height": 350
+        },
+        { 
+            "id": "CloudAtlas",
+            "type": "video",
+            "path": "slides/cloudAtlas_characters",
+            "width": 1680,
+            "height": 980
+        }
+    ]
+}

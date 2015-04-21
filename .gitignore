@@ -1,0 +1,10 @@
+.DS_Store
+.sass-cache
+/app/cache/*
+/app/bower_components/*
+/app/css/main.css
+/vendor
+/dist
+/node_modules
+/threeBuild/node_modules
+/app/shaders/node_modules
