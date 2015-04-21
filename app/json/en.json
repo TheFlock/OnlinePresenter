@@ -3,7 +3,31 @@
         {   
             "id": "intro",
             "type": "image",
-            "path": "slides/mountain_bg.jpg"
+            "path": "slides/landing.jpg"
+        },
+        {   
+            "id": "makeup",
+            "type": "image",
+            "path": "slides/makeup.jpg",
+            "sizing": "contain",
+            "width": 1920,
+            "height": 1258
+        },
+        {   
+            "id": "ghost",
+            "type": "image",
+            "path": "slides/ghost.jpg",
+            "sizing": "contain",
+            "width": 1258,
+            "height": 1920
+        },
+        {   
+            "id": "lightrig",
+            "type": "image",
+            "path": "slides/lightrig.jpg",
+            "sizing": "contain",
+            "width": 1920,
+            "height": 1258
         },
         { 
             "id": "300Map",
@@ -33,7 +57,7 @@
             "width": 1530,
             "height": 350
         },
-        { 
+        {
             "id": "CloudAtlas",
             "type": "video",
             "path": "slides/cloudAtlas_characters",

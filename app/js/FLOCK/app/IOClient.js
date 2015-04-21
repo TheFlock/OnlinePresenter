@@ -60,7 +60,7 @@
     }
     
     function sendMessage(type, message){
-        console.log("sendMessage: "+type+" | "+message);
+        console.log("sendMessage: "+type+" | "+String(message) );
         $.post('php/sendMessage.php', { 
             channelID: this.channelID, 
             eventID: type,

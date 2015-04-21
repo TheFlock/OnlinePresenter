@@ -21,6 +21,7 @@
         this.elem.className = "slide image";
         this.loaded = false;
         this.data = data;
+        this.sizing = (this.data.sizing)?String(this.data.sizing).toLowerCase():"contain";
     }
     
     function load(callBack){
@@ -47,7 +48,9 @@
         var imgW = this.image.width || 1920,
             imgH = this.image.height || 1080;
         
-        var destRatio = Math.max(w/imgW, h/imgH),
+        var sizeFn = (this.sizing == "contain")?Math.min:(this.sizing == "orig")?function(){return 1}:Math.max;
+        
+        var destRatio = sizeFn(w/imgW, h/imgH),
             destW = imgW*destRatio,
             destH = imgH*destRatio,
             offLeft = (w-destW)/2,

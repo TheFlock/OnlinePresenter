@@ -59,7 +59,8 @@
     }
         
     function userStatus(e){
-        console.log('IO | userStatus')
+        console.log('IO | userStatus');
+        console.log(e);
         console.log($.parseJSON(String(e)));   
         this.userManager.userStatus($.parseJSON(String(e)));
     }
