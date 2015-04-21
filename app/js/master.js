@@ -100,6 +100,11 @@ require([
         updateLabel.call(this);
     }
     
+    function gotoslide(num){
+        this.currentSlide = num;
+        this.changeSlide(0);
+    }
+    
     function updateLabel(){
         document.getElementById("slideLabel").innerHTML = this.slides[this.currentSlide].id || this.currentSlide;
     }
@@ -122,7 +127,9 @@ require([
         if(callbackFn)callbackFn();
     }
 
-
+    Main.prototype.changeSlide = changeSlide;
+    Main.prototype.gotoslide = gotoslide;
+    
     // call init on document ready
     $(function () {
         FLOCK.app.main = new Main();
